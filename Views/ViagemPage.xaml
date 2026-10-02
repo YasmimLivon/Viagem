@@ -18,8 +18,7 @@
 
             <CarouselView.ItemTemplate>
                 <DataTemplate x:DataType="models:ViagemItem">
-                    <VerticalStackLayout VerticalOptions="Center"
-                        Spacing="10">
+                    <VerticalStackLayout VerticalOptions="Center">
 
                         <Image Source="{Binding ImageUrl}"
                         Aspect="AspectFit"
@@ -59,13 +58,15 @@
 
         <Grid Grid.Row="2"
             ColumnDefinitions="*,*" 
-            ColumnSpacing="15"
-            Padding="0, 15, 0, 0">
+            ColumnSpacing="10"
+             HorizontalOptions="Center"
+              VerticalOptions="Center">
 
             <Button Grid.Column="0"
             Text= "Get Started"
             BackgroundColor="#FF1568"
-            FontSize="20"/>
+            FontSize="20"
+            Margin="0,20,0,0"/>
 
             <Button Grid.Column="1"
             Command="{Binding ProximoCommand}"
@@ -73,6 +74,7 @@
             BackgroundColor="#4EA717"
             WidthRequest="101"
             FontSize="20"
+            Margin="0,20,0,0"
             IsVisible="{Binding ExibirBotao}"/>
         </Grid>
         
